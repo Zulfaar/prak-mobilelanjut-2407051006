@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'first_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,30 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Menghilangkan pita 'DEBUG' di pojok kanan atas
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Praktikum Mobile Lanjut - Pertemuan 2'),
-          backgroundColor: Colors.deepPurple, // Mengubah warna AppBar
-          foregroundColor: Colors.white, // Mengubah warna teks AppBar
-        ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Halo, Nama Saya Zulfa Riana',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8), // Jarak antar teks
-              Text(
-                'NPM: 2407051006',
-                style: TextStyle(fontSize: 16),
-              ),
-            ],
-          ),
-        ),
+      title: 'Praktikum Mobile Lanjut',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: const FirstWidget(),
     );
   }
 }
