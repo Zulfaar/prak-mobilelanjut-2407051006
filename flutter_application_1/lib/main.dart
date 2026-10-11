@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'assets_media.dart';
+import 'home_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,11 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Assets & Media',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorSchemeSeed: Colors.indigo,
+        useMaterial3: true,
       ),
-      home: const AssetsMedia(),
+      home: const HomePage(),
     );
   }
 }
